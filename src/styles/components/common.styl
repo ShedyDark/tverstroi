@@ -1,0 +1,486 @@
+html, body
+    height 100%
+    min-height 100%
+    overflow auto
+
+html
+  box-sizing: border-box;
+
+*, *:before, *:after 
+  box-sizing: inherit
+
+
+body 
+    font-size 18px
+    line-height normal
+    font-family: 'Roboto', sans-serif;
+    font-family: 'GOSTUI2';
+    color #3b4256
+
+h1
+    font-size 72px
+    font-weight 600
+    max-width 600px
+    line-height normal
+    color #fff
+    margin-bottom 12px
+
+h2
+    font-size 32px
+    font-weight 500
+    margin-bottom 24px    
+
+p
+    line-height 24px
+    margin 0 0 18px
+
+ol
+    display flex
+    position relative
+    text-align center
+    margin-bottom 20px
+    @media $s
+        flex-flow column
+        max-width 420px
+        margin 0 auto
+    &:before
+        content ''
+        display block
+        position absolute
+        height 2px
+        background #fff
+        top 15px
+        left 12.5%
+        right 12.5%
+        z-index 0
+        @media $s
+            left 28px
+            top 15px
+            height 220px
+            right auto
+            width 2px
+    li
+        counter-increment: list-number;
+        color #fff
+        width 25%
+        padding-left 12px
+        font-size 18px
+        line-height normal
+        position relative
+        z-index 1
+        @media $s
+            display flex
+            text-align left
+            min-height 75px
+            width 100%
+            br
+                display none
+            .text
+                padding-top 8px
+        &:before
+            content: counter(list-number);
+            margin-right: 14px;
+            margin-bottom:24px;
+            width:35px;
+            height:35px;
+            display:inline-flex;
+            align-items:center;
+            justify-content: center;
+            font-size:16px;
+            background-color: #fff;
+            color $c1
+            font-weight 600
+            font-size 18px
+            border-radius:50%;
+            flex 0 0 auto
+
+.subline
+    font-size 24px
+    color $c1
+
+
+[class$="__inner"]
+    max-width 1020px
+    margin 0 auto
+    padding 32px 20px
+    @media $s
+        padding 0 10px
+
+.t-center
+    text-align center
+.t-right
+    text-align right
+
+.header
+    background #fff
+    &.fixed
+        position sticky 
+        top 0
+        z-index 200
+    &__logo
+        display flex
+        align-items center
+        line-height 20px
+        position relative
+        margin 0 auto -4px
+        overflow hidden
+        / .header.fixed &
+            margin-left 0
+        &-img
+            height 121px
+            margin -14px 0
+            / .header.fixed &
+                margin -30px 0
+        &-title
+            font-size 20px
+            font-weight 500
+            letter-spacing 0.2px
+            color $c1
+        &-subtitle
+            font-size 14px
+    &__inner
+        display flex
+        justify-content space-between
+        align-items center
+        padding 8px 16px
+        height 100%
+    &__right
+        display flex
+    &__link
+        font-size 18px
+        text-decoration none
+        color #3b4256
+        font-weight 500
+        display flex
+        align-items center
+        min-width 174px
+        @media $s
+            min-width 32px
+            font-size 0
+        svg
+            margin-right 8px
+            @media $s
+                margin-right 0
+                height 25px
+                width 25px
+       
+
+.call
+    display flex
+    align-items center
+    text-decoration none
+    font-weight 500
+    color #3b4256
+    position relative
+    @media $xs
+        font-size 0
+    &__icon
+        position relative
+        top 3px
+        margin-right 4px
+        img
+            width 24px
+        @media $s
+            margin-right 0
+    
+.whatsapp
+    display flex
+    justify-content center
+    align-items center
+    width 32px
+    height 32px
+    background #82b941
+    border-radius 50%
+    img
+        width 70%
+
+.hero
+    user-select: none; 
+    height calc(100vh - 54px)
+    background-size cover
+    background-position center top
+    @media $s
+        background-size 1000px auto
+        background-position -190px 0
+        height 540px
+    &__inner
+        display flex
+        align-items center
+        height 100%
+    /*&__left
+        background rgba(0,0,0,0.6)
+        padding 30px
+        display inline-block
+        margin-top 30px
+        h1
+            font-size 4.5rem*/
+
+
+.flex
+    display flex
+    margin-bottom 32px
+    @media $s
+        flex-flow column wrap
+    &__left
+        max-width 100%
+        @media $s
+            padding 42px 16px 16px
+
+.subline
+    font-size 16px
+    font-weight 500
+    text-align center
+    margin-bottom 40px
+    color #fff
+
+.footer
+    background url('../i/footer.jpg') no-repeat center top #000
+    background-size 1300px auto
+    position relative
+    text-align center
+    padding 60px 0
+    @media $s
+        background-size 1000px auto
+        background-position 0 0
+    &__overlay
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(35,42,53,0.5);
+        background: rgba(3,4,9,0.8);
+    &__link
+        display inline-flex
+        align-items center
+        text-decoration none
+        font-size 28px
+        color #fff
+        font-weight 500
+        margin-bottom 12px
+        &.show-modal
+            font-size 16px
+            margin-top 32px
+            border-bottom 1px dashed #fff
+        &:hover
+            color $c2
+            border-color $c2
+        svg
+            width 41px
+            height 41px
+            fill currentColor
+            margin-right 8px
+    &__inner
+        position relative
+        z-index 1
+        padding 32px 0
+        display flex 
+        flex-flow column wrap
+        align-items center
+
+.about-img
+    max-height 460px
+    margin-left 32px
+    @media $s
+        max-width 100%
+        margin-left 0
+
+
+.pluses
+    display flex
+    margin 46px -20px 0
+    @media $s
+        flex-flow row wrap
+    &__item
+        padding 0 8px
+        @media $s
+            max-width 300px
+            margin 0 auto
+            margin-bottom 12px
+        &-icon
+            display flex
+            align-items center
+            justify-content center
+            height 80px
+            margin-bottom 16px
+            img
+                max-height 100%
+            / .pluses .n3 img
+                min-height 87px
+            / .pluses .n4 img
+                height 70px
+                margin-bottom -28px
+        &-title
+            font-weight 500
+            margin-bottom 8px
+        p
+            font-size 14px
+            line-height normal
+
+.steps
+    background #203b63
+    @media $s
+        padding 30px 0
+
+.bg2
+    background #f4f7fb
+    @media $s
+        padding 42px 0
+
+.tags
+    margin-bottom 24px
+    &__item
+        color #06498C
+        font-size 14px
+        font-weight 400
+        line-height 20px
+        padding 4px 8px
+        border-radius 8px
+        margin-right 8px
+        transition all 0.3s ease
+        text-decoration none
+        &:hover
+            opacity 0.85
+        &.active
+            background #f3f3f3
+
+.gallery
+    display flex
+    flex-flow row wrap
+    opacity 0
+    visibility hidden
+    transition all 0.3s ease
+    height 0
+    margin-bottom 16px
+    &.active
+        opacity 1
+        height auto
+        visibility visible
+    &__item
+        padding 0 6px
+        margin-bottom 6px
+        max-width 33%
+        display flex
+        @media $s
+            max-width 50%
+    img
+        max-width 100%
+        max-height 100%
+        max-height 200px
+
+
+.smartphoto
+    z-index 1000
+
+
+
+table
+  &:not(.fl-table)
+    text-align left
+    font-size 16px
+    border-collapse collapse
+    border-spacing 0
+    empty-cells show
+    border 0
+    width 100% !important
+    max-width 100%
+    overflow-y hidden
+    overflow-x auto
+    border-left 1px solid #fff
+    margin-bottom 30px
+    -webkit-box-shadow 0px 15px 30px rgba(0,0,0,0.1)
+    box-shadow 0px 15px 30px rgba(0,0,0,0.1)
+    max-width 600px
+    overflow hidden
+    border-radius 8px
+    caption
+      color #000
+      padding 1em 0
+      text-align center
+    td
+      border-right 1px solid #f8f8f8
+      font-size 14px
+      line-height 20px
+    th
+      background #203b63
+      color #fff
+      font-weight 500
+      vertical-align middle
+      text-align center
+      padding 8px 20px
+      border 0 !important
+      &:nth-child(odd)
+        background #324960
+    thead
+      color #000
+      text-align left
+      vertical-align bottom
+    tr
+      background-color #fff
+      &:nth-child(even)
+        background #f8f8f8
+    p
+      margin 0
+    a
+        text-decoration none
+
+table:not(.fl-table) td,
+table:not(.fl-table) th
+  border 2px solid #fff
+  margin 0
+  overflow visible
+  padding 10px 20px
+  word-wrap break-word
+
+table:not(.fl-table) td:first-child,
+table:not(.fl-table) th:first-child
+  border-left 0
+
+
+
+.modal
+    position fixed
+    top 50%
+    left 50%
+    transform translate(-50%,-50%)
+    z-index 300
+    border-radius 8px
+    opacity 0
+    visibility hidden
+    transition all 0.3s ease
+    overflow hidden
+    &.active
+        opacity 1
+        visibility visible
+    &-bg
+        content ''
+        position fixed
+        top 0 
+        left 0
+        right 0 
+        bottom 0
+        background rgba(0,0,0,0.8)
+        z-index 200
+        opacity 0
+        visibility hidden
+        transition all 0.3s ease
+        &.active
+            opacity 1
+            visibility visible
+    &__x
+        position absolute
+        right 0
+        top 0
+        background url('../i/x.svg') no-repeat center
+        width 40px
+        height 40px
+        cursor pointer
+
+
+.section
+    overflow hidden
+
+
+.section.n3
+    @media $s
+        padding 32px 0 16px

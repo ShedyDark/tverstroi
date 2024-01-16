@@ -1,0 +1,158 @@
+extends layouts/default
+
+block content
+    .content
+        .hero(style="background-image:url('f/i/hero.jpg')")
+            .hero__inner
+                .hero__left
+                    // h1 ПОСТРОИМ<br>ДОМ<br>ПОД КЛЮЧ
+                    //.subline Строители которым можно доверять
+
+        .section.steps
+            .section__inner
+                .subline Порядок работ
+                ol 
+                    li: .text Бесплатная консультация, замер
+                    li: .text Составление коммерческого предложения
+                    li: .text Заключение <br>договора
+                    li: .text Организация всех строительных процессов в указанный срок
+
+        .section
+            .section__inner
+                .section__inner-text
+                    .flex 
+                        .flex__left
+                            h2 О нас
+                            p Наша цель - создавать уютные и функциональные пространства, отвечающие самым сокровенным потребностям. Мы придаем каждому проекту уникальность, а индивидуальный подход к клиенту - наша ключевая особенность. 
+                            p Мы строим с душой, и в каждом проекте вкладываем частичку себя. Выбирая нас, вы выбираете надежного партнера, который сделает все возможное, чтобы ваш дом стал воплощением вашей семейной истории и счастья. 
+                        .flex__right
+                            img.about-img(src="f/i/tiles.png")     
+        .section.bg2
+            .section__inner
+                .t-center 
+                    h2 Наши преимущества
+                    .pluses 
+                        .pluses__item
+                            .pluses__item-icon.n1: img(src="f/i/prof.svg")
+                            .pluses__item-title Богатый опыт
+                            p Более 10 лет успешного строительства домов, гарантирующих качество и надежность.
+                        .pluses__item
+                            .pluses__item-icon.n2: img(src="f/i/team.svg")
+                            .pluses__item-title Профессиональная команда
+                            p Высококвалифицированные специалисты обеспечивают высокоточное исполнение всех строительных работ.
+                        .pluses__item
+                            .pluses__item-icon.n3: img(src="f/i/personal.svg")
+                            .pluses__item-title Индивидуальный подход
+                            p Мы внимательно слушаем ваши пожелания, создавая дом, идеально соответствующий вашим потребностям.
+                        .pluses__item
+                            .pluses__item-icon.n4: img(src="f/i/materials.svg")
+                            .pluses__item-title Качественные материалы
+                            p Мы используем только надежные и экологически чистые материалы для вашего комфорта и безопасности.
+
+        .section.n3
+            .section__inner
+                .tags
+                    a.tags__item.active(href="#") Примеры работ
+                    a.tags__item(href="#") Проекты
+                    a.tags__item(href="#") Рабочий процесс
+
+                .gallery-wrapper
+                    .gallery.active
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/i-6.jpg" data-group="Примеры")
+                            img(src="f/i/photos/i-6.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/i-7.jpg" data-group="Примеры")
+                            img(src="f/i/photos/i-7.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/i-8.jpg" data-group="Примеры")
+                            img(src="f/i/photos/i-8.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/i-9.jpg" data-group="Примеры")
+                            img(src="f/i/photos/i-9.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/i-10.jpg" data-group="Примеры")
+                            img(src="f/i/photos/i-10.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/i-11.jpg" data-group="Примеры")
+                            img(src="f/i/photos/i-11.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/i-12.jpg" data-group="Примеры")
+                            img(src="f/i/photos/i-12.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/i-13.jpg" data-group="Примеры")
+                            img(src="f/i/photos/i-13.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/i-14.jpg" data-group="Примеры")
+                            img(src="f/i/photos/i-14.jpg")
+                    .gallery 
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/i-1.jpg" data-group="Проекты")
+                            img(src="f/i/photos/i-1.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/i-2.jpg" data-group="Проекты")
+                            img(src="f/i/photos/i-2.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/i-3.jpg" data-group="Проекты")
+                            img(src="f/i/photos/i-3.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/i-4.jpg" data-group="Проекты")
+                            img(src="f/i/photos/i-4.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/i-5.jpg" data-group="Проекты")
+                            img(src="f/i/photos/i-5.jpg")
+                    .gallery
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-1.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-1.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-2.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-2.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-3.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-3.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-4.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-4.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-5.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-5.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-6.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-6.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-7.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-7.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-8.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-8.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-9.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-9.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-10.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-10.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-11.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-11.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-12.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-12.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-13.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-13.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-14.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-14.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-15.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-15.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-16.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-16.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-17.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-17.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-18.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-18.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-19.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-19.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-20.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-20.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-21.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-21.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-22.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-22.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-23.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-23.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-24.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-24.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-25.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-25.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-26.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-26.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-27.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-27.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-28.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-28.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-29.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-29.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-30.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-30.jpg")
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-31.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-31.jpg")   
+                        a.gallery__item.js-smartPhoto(href="f/i/photos/work/i-32.jpg" data-group="Рабочий процесс")
+                            img(src="f/i/photos/work/i-32.jpg") 
+
+        .section 
+            .section__inner 
+                #widget-container.demo-frame
